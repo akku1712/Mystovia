@@ -19,8 +19,8 @@ const creatures = [
   }
 ];
 
-// Show Creature of the Day
 function showCreatureOfDay() {
+  if(!document.getElementById('creature-img')) return;
   const idx = new Date().getDate() % creatures.length;
   const creature = creatures[idx];
   document.getElementById('creature-img').src = creature.img;
@@ -28,19 +28,21 @@ function showCreatureOfDay() {
   document.getElementById('creature-lore').textContent = creature.lore;
 }
 
-// Summon Your Own Creature (random from array)
 document.addEventListener('DOMContentLoaded', function() {
   showCreatureOfDay();
-  document.getElementById('summon-btn').addEventListener('click', function() {
-    const idx = Math.floor(Math.random() * creatures.length);
-    const c = creatures[idx];
-    document.getElementById('creature-output').innerHTML = `
-      <div class="creature-card">
-        <img src="${c.img}" alt="${c.name}">
-        <h3>${c.name}</h3>
-        <p>${c.lore}</p>
-        <p class="attribution">${c.license}</p>
-      </div>
-    `;
-  });
+  const summonBtn = document.getElementById('summon-btn');
+  if (summonBtn) {
+    summonBtn.addEventListener('click', function() {
+      const idx = Math.floor(Math.random() * creatures.length);
+      const c = creatures[idx];
+      document.getElementById('creature-output').innerHTML = `
+        <div class="creature-card">
+          <img src="${c.img}" alt="${c.name}">
+          <h3>${c.name}</h3>
+          <p>${c.lore}</p>
+          <p class="attribution">${c.license}</p>
+        </div>
+      `;
+    });
+  }
 });
