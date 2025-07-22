@@ -8,19 +8,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="logo">MYSTOVIA</h1>
-      <p class="tagline">World of Mystovia</p>
-    </div>
-    <img src="enchanted-forest.jpg" class="bg-parallax" alt="Enchanted Forest Background">
-    <div class="fog-animation"></div>
+  <header class="header">
+    <span class="logo">MYSTOVIA</span>
+    <span class="tagline">World of Mystovia</span>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="creature.html">Creature</a>
+      <a href="world.html" class="active">World</a>
+      <a href="ai-portal.html">AI Portal</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-
   <main>
-    <section class="about-section">
-      <h2>The Realms Map</h2>
-      <img src="magical-map.jpg" alt="Map of Mystovia" style="width:100%;max-width:500px;border-radius:1em;box-shadow:0 0 30px #28eed8cc;">
+    <section>
+      <img src="magical-map.jpg" alt="Map of Mystovia" style="width:100%;max-width:400px;border-radius:1em;box-shadow:0 0 30px #bacedbcc;margin:1.5em auto;display:block;">
       <div class="timeline">
         <div class="timeline-card">
           <h3>Crimson Woods</h3>
@@ -32,7 +35,7 @@
         </div>
         <div class="timeline-card">
           <h3>Luminous Wastes</h3>
-          <p>Glowing barren lands where elemental storms birth new legends each night.</p>
+          <p>Glowing lands where elemental storms birth new legends each night.</p>
         </div>
       </div>
     </section>
