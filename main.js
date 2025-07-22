@@ -28,7 +28,7 @@ function showCreatureOfDay() {
   document.getElementById('creature-lore').textContent = creature.lore;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   showCreatureOfDay();
   const summonBtn = document.getElementById('summon-btn');
   if (summonBtn) {
@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const idx = Math.floor(Math.random() * creatures.length);
       const c = creatures[idx];
       document.getElementById('creature-output').innerHTML = `
-        <div class="creature-card">
+        <div class="creature-card glass-card pop-in">
           <img src="${c.img}" alt="${c.name}">
-          <h3>${c.name}</h3>
+          <h3 class="glow-1">${c.name}</h3>
           <p>${c.lore}</p>
           <p class="attribution">${c.license}</p>
         </div>
