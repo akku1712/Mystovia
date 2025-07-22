@@ -1,0 +1,12 @@
+{
+  "name": "Mystovia",
+  "short_name": "Mystovia",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#5837d0",
+  "background_color": "#faf3ff",
+  "icons": [
+    { "src": "mystovia-logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "mystovia-logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
