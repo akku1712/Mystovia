@@ -8,70 +8,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="logo">MYSTOVIA</h1>
-      <p class="tagline">Where Myth Meets Reality</p>
-    </div>
-    <img src="enchanted-forest.jpg" class="bg-parallax" alt="Enchanted Forest Background">
-    <div class="fog-animation"></div>
+  <header class="header">
+    <span class="logo">MYSTOVIA</span>
+    <span class="tagline">Where Myth Meets Reality</span>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="creature.html">Creature</a>
+      <a href="world.html">World</a>
+      <a href="ai-portal.html">AI Portal</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-
   <main>
-    <section class="creature-section" id="creature-section">
-      <h2>Creature of the Day</h2>
+    <section>
       <div class="creature-card">
         <img id="creature-img" src="abyssal-wyrm.jpg" alt="Abyssal Wyrm">
         <h3 id="creature-name">Abyssal Wyrm</h3>
-        <p id="creature-lore">
-          Guardian of the Lost Seas, lurking in the abyssal caverns beneath Mystovia. Its glowing aquatic scales and massive wings shimmer with bioluminescent power.
-        </p>
+        <p id="creature-lore">Guardian of the Lost Seas, lurking in the abyssal caverns beneath Mystovia. Its glowing aquatic scales and massive wings shimmer with bioluminescent power.</p>
         <p class="attribution">Art by DALL·E – License Placeholder</p>
       </div>
     </section>
-    
-    <section class="portal-section">
-      <h2>Summon Your Own Creature</h2>
-      <button id="summon-btn">Summon Creature</button>
-      <div id="creature-output"></div>
-    </section>
-    
-    <section class="about-section">
-      <h2>About & Lore</h2>
-      <div class="timeline">
-        <div class="timeline-card">
-          <img src="landscape-1.jpg" class="timeline-img" alt="Landscape of Mystovia">
-          <h3>Era of Awakening</h3>
-          <p>Mystovia was born from cosmic magic, its lands forged by the dreams of ancient spirits.</p>
-        </div>
-        <div class="timeline-card">
-          <img src="landscape-2.jpg" class="timeline-img" alt="Mystic Valley">
-          <h3>The First Realms</h3>
-          <p>The first realms emerged: Crimson Woods, the Luminous Wastes, and the Abyssal Caves, each home to unique creatures.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="fire-phoenix.jpg" alt="Fire Phoenix" class="gallery-thumb">
-        <img src="moon-dragon.jpg" alt="Moon Dragon" class="gallery-thumb">
-        <!-- Add more AI artworks here -->
-      </div>
-    </section>
-    
-    <section class="contact-section">
-      <h2>Join the Quest</h2>
-      <form class="join-quest">
-        <input type="text" placeholder="Your Name" required>
-        <input type="text" placeholder="Scroll Title" required>
-        <textarea placeholder="Why do you wish to join?"></textarea>
-        <button type="submit" class="glow-btn">Submit</button>
-      </form>
-    </section>
   </main>
-
   <script src="main.js"></script>
 </body>
 </html>
