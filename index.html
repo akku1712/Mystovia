@@ -2,36 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mystovia – Where Myth Meets Reality</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="theme-color" content="#5837d0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="mystovia-logo.png">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet">
+  <title>Mystovia – Where Myth Meets Reality</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <span class="logo">MYSTOVIA</span>
-    <span class="tagline">Where Myth Meets Reality</span>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="creature.html">Creature</a>
-      <a href="world.html">World</a>
-      <a href="ai-portal.html">AI Portal</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <div class="creature-card">
-        <img id="creature-img" src="abyssal-wyrm.jpg" alt="Abyssal Wyrm">
-        <h3 id="creature-name">Abyssal Wyrm</h3>
-        <p id="creature-lore">Guardian of the Lost Seas, lurking in the abyssal caverns beneath Mystovia. Its glowing aquatic scales and massive wings shimmer with bioluminescent power.</p>
-        <p class="attribution">Art by DALL·E – License Placeholder</p>
-      </div>
-    </section>
-  </main>
+  <div id="wrapper">
+    <header class="header-glass">
+      <span class="logo spin-gradient">MYSTOVIA</span>
+      <span class="tagline fade-in-long">Where Myth Meets Reality</span>
+      <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="creature.html">Creature</a>
+        <a href="world.html">World</a>
+        <a href="ai-portal.html">AI Portal</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-section gradient-bg">
+        <div class="creature-card glass-card pop-in">
+          <img id="creature-img" src="abyssal-wyrm.jpg" alt="Abyssal Wyrm" />
+          <h3 id="creature-name" class="glow-1">Abyssal Wyrm</h3>
+          <p id="creature-lore">
+            Guardian of the Lost Seas, lurking in the abyssal caverns beneath Mystovia. Its glowing aquatic scales and massive wings shimmer with bioluminescent power.
+          </p>
+          <p class="attribution">Art by DALL·E – License Placeholder</p>
+        </div>
+      </section>
+
+      <section class="cta-section fade-in">
+        <h2 class="gradient-text">Summon Your Own Creature!</h2>
+        <button id="summon-btn" aria-label="Summon a random fantasy creature" class="btn-creative">Summon Creature</button>
+        <div id="creature-output"></div>
+      </section>
+    </main>
+  </div>
+  <!-- Floating PWA Install Button (visible if app not installed) -->
+  <button id="pwa-install-prompt" style="display:none;" class="fab">Install</button>
+
   <script src="main.js"></script>
+  <script>
+    // PWA Service Worker Registration
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+
+    // Simple PWA Install Prompt Button Logic
+    let deferredPrompt;
+    const pwaBtn = document.getElementById('pwa-install-prompt');
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      pwaBtn.style.display = 'block';
+    });
+    pwaBtn.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(choice => {
+        if (choice.outcome === 'accepted') {
+          pwaBtn.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
