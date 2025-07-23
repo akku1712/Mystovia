@@ -20,17 +20,7 @@ html, body {
   flex-direction: column;
   align-items: center;
 }
-.logo-img {
-  width: 48px;
-  height: 48px;
-  vertical-align: middle;
-  border-radius: 12px;
-  margin-right: 10px;
-  margin-top: -6px;
-}
 .logo {
-  display: flex;
-  align-items: center;
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   letter-spacing: 0.13em;
@@ -100,19 +90,27 @@ main {
   transition: box-shadow .2s, transform .19s;
 }
 .glass-card:hover { box-shadow: 0 14px 54px #efd8fd, 0 0 36px #8770fc44; transform: scale(1.04) rotate(-1deg); }
-.creature-card img, .timeline-card img, .gallery-thumb {
-  width: 164px;
-  height: 164px;
+.creature-card img, .timeline-card img, .gallery-thumb, .valley-img {
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 1.2em;
   margin-bottom: 0.9em;
   box-shadow: 0 0 17px #bca5f977, 0 3px 20px #fff6db44;
   border: 3.5px solid #ffe8ea50;
+  transition: transform 0.25s ease;
+}
+.creature-card img:hover, .gallery-thumb:hover, .valley-img:hover, .timeline-card img:hover {
+  transform: scale(1.05);
 }
 .creature-card h3 { margin-top: 0.59em; margin-bottom: 0.22em; font-size: 1.4rem; font-family: 'Playfair Display', serif; color: #5535d8; }
 .glow-1 { text-shadow: 0 0 7px #ffd271, 0 1px 14px #a078f2; }
 .attribution { color:#7b58cb;font-size:0.94em;padding-top:0.31em; }
-.creature-card ul { text-align:left; margin:0.5em auto 0 auto; padding-left:1.3em; }
+.creature-card ul, .abilities-list {
+  text-align:left; 
+  margin:0.5em auto 0 auto; 
+  padding-left:1.3em;
+}
 .cta-section { padding: 1.1em 1em 2em 1em; text-align: center; }
 .btn-creative {
   font-family: 'Playfair Display', serif;
@@ -137,25 +135,13 @@ main {
   font-family: 'Playfair Display', serif;
 }
 #creature-output { margin:1.4em auto; min-height: 50px;color: #8a54fa; }
-.fab {
-  position: fixed;
-  right: 20px;
-  bottom: 18px;
-  width: 52px; height: 52px;
-  border-radius: 50%; font-size: 22px;
-  background: linear-gradient(135deg,#ffd271,#8fd9fa 85%);
-  color: #7e33ce; border:none; box-shadow: 0 4px 22px #856cc633;
-  z-index: 1000;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: bold;
-  transition: background 0.21s, color 0.17s, transform 0.17s;
-}
-.fab:hover { background:linear-gradient(135deg,#a478ff,#ffd271 80%); color:#c412c6; transform:scale(1.08); }
+
 .timeline {
   display: flex;
   gap: 1.2em;
   overflow-x: auto;
 }
+
 .timeline-card {
   min-width: 215px;
   max-width: 290px;
@@ -168,20 +154,24 @@ main {
   margin: 1.6em 0;
   padding: 1em 0.8em 1em 0.8em;
 }
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
   gap: 1.1em;
   margin-top: 0.8em;
 }
+
 .gallery-thumb {
   transition: box-shadow 0.18s, transform 0.18s;
   filter: brightness(1.04) contrast(1.10);
 }
+
 .gallery-thumb:hover {
   box-shadow: 0 0 31px #b1cfff99, 0 0 19px #c8a2fa80;
   transform: scale(1.04) rotate(-1.5deg);
 }
+
 form.join-quest {
   display: grid;
   gap: 0.88em;
@@ -201,6 +191,7 @@ form.join-quest {
   font-size: 0.97em;
 }
 .join-quest textarea { min-height: 68px; resize: vertical;}
+
 .footer-glass {
   background: rgba(239, 220, 253, 0.88);
   backdrop-filter: blur(7px);
@@ -223,12 +214,6 @@ form.join-quest {
   align-items: center;
   gap: 0.5em;
   margin-bottom: 0.3em;
-}
-.footer-logo-img {
-  width: 32px;
-  height: 32px;
-  border-radius: 7px;
-  box-shadow: 0 0 6px #bebaf7;
 }
 .footer-title {
   font-family: 'Playfair Display', serif;
@@ -297,6 +282,10 @@ form.join-quest {
   .hero-section {min-height: 32vh;}
   .navbar a{font-size:.91rem; padding:0.19em 0.6em;}
   .glass-card { width: 96vw; padding: 1em 0.05em;}
+  .creature-card img, .gallery-thumb, .valley-img, .timeline-card img {
+    width: 96vw;
+    height: auto;
+  }
 }
 ::-webkit-scrollbar {width: 7px; background: #ebdbff;}
 ::-webkit-scrollbar-thumb {background: linear-gradient(135deg,#fdc3fa 30%,#bfd5fa 80%); border-radius:6px;}
