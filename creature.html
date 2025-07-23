@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mystovia – Creature of the Day</title>
+  <title>Mystovia – Creatures</title>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <span class="logo">MYSTOVIA</span>
-    <span class="tagline">Creature of the Day</span>
+<div id="wrapper">
+  <header class="header-glass">
+    <span class="logo"><img src="logo.png" class="logo-img" alt="Mystovia Logo">MYSTOVIA</span>
+    <span class="tagline">Creatures of Mystovia</span>
     <nav class="navbar">
       <a href="index.html">Home</a>
-      <a href="creature.html" class="active">Creature</a>
+      <a href="creature.html" class="active">Creatures</a>
       <a href="world.html">World</a>
       <a href="ai-portal.html">AI Portal</a>
       <a href="about.html">About</a>
@@ -23,14 +24,144 @@
   </header>
   <main>
     <section>
-      <div class="creature-card">
-        <img id="creature-img" src="abyssal-wyrm.jpg" alt="Abyssal Wyrm">
-        <h3 id="creature-name">Abyssal Wyrm</h3>
-        <p id="creature-lore">Guardian of the Lost Seas, lurking in the abyssal caverns beneath Mystovia. Its glowing aquatic scales and massive wings shimmer with bioluminescent power.</p>
-        <p class="attribution">Art by DALL·E – License Placeholder</p>
+      <div class="creature-list">
+        <!-- Creature 1: Abyssal Wyrm -->
+        <div class="creature-card glass-card">
+          <img src="abyssal-wyrm.jpg" alt="Abyssal Wyrm">
+          <h3 class="glow-1">Abyssal Wyrm</h3>
+          <p><strong>Type:</strong> Dragon/Guardian</p>
+          <p><strong>Habitat:</strong> Sunken Caves, Lost Seas of Mystovia</p>
+          <p><strong>Lore:</strong> Born from the convergence of ancient tides and cosmic magic, the Abyssal Wyrm watches over the submerged world beneath Mystovia. Its massive wings gently stir ocean currents, while its scaled hide casts rippling blue-green light across the abyss.</p>
+          <p><strong>Abilities:</strong></p>
+          <ul>
+            <li>Bioluminescent scales for deep-sea illumination</li>
+            <li>Can manipulate water pressure and form protective barriers</li>
+            <li>Mystic roar causes seismic tremors beneath the sea floor</li>
+          </ul>
+          <p><strong>Trivia:</strong> When the moon is full, the Wyrm's eyes glow with memories of lost civilizations.</p>
+          <p class="attribution">Art by DALL·E – License Placeholder</p>
+        </div>
+
+        <!-- Creature 2: Fire Phoenix -->
+        <div class="creature-card glass-card">
+          <img src="fire-phoenix.jpg" alt="Fire Phoenix">
+          <h3 class="glow-1">Fire Phoenix</h3>
+          <p><strong>Type:</strong> Elemental Bird</p>
+          <p><strong>Habitat:</strong> Volcanic Peaks, Ember Valleys</p>
+          <p><strong>Lore:</strong> A mystical avian woven from pure flame, the Fire Phoenix arises from embers at dawn. Its wings ignite the sky and renew the land with every migration.</p>
+          <p><strong>Abilities:</strong></p>
+          <ul>
+            <li>Resurrects from ashes once per century</li>
+            <li>Feathers shed healing sparks onto scorched earth</li>
+            <li>Calls forth firestorms during battle</li>
+          </ul>
+          <p><strong>Trivia:</strong> The Phoenix's song is said to heal the hearts of those who hear it before sunrise.</p>
+          <p class="attribution">Art by DALL·E – License Placeholder</p>
+        </div>
+
+        <!-- Creature 3: Moon Dragon -->
+        <div class="creature-card glass-card">
+          <img src="moon-dragon.jpg" alt="Moon Dragon">
+          <h3 class="glow-1">Moon Dragon</h3>
+          <p><strong>Type:</strong> Ethereal Dragon</p>
+          <p><strong>Habitat:</strong> Floating amidst the Twin Moons and Starfields</p>
+          <p><strong>Lore:</strong> Dreamlike and rarely glimpsed, the Moon Dragon rides starlit winds high above Mystovia. Its silvery scales catch and refract the glow of twin moons, guiding lost souls at night.</p>
+          <p><strong>Abilities:</strong></p>
+          <ul>
+            <li>Can become partially invisible under moonlight</li>
+            <li>Breathes shimmering mist that reveals truth and dispels illusions</li>
+            <li>Communicates through constellations in the night sky</li>
+          </ul>
+          <p><strong>Trivia:</strong> Legends claim a single silver scale can guide travelers home, no matter how lost.</p>
+          <p class="attribution">Art by DALL·E – License Placeholder</p>
+        </div>
       </div>
     </section>
   </main>
+  <!-- Add the interactive footer below -->
+  <footer class="footer-glass">
+    <div class="footer-content">
+      <div class="footer-logo-title">
+        <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
+        <span class="footer-title">Mystovia Portal</span>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="creature.html">Creatures</a>
+        <a href="world.html">World</a>
+        <a href="ai-portal.html">AI Portal</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <span>Connect:</span>
+        <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
+        <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
+        <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
+      </div>
+      <div class="footer-credits">
+        <button id="footer-music-btn" aria-label="Toggle music" class="footer-music-btn">🎵 Fantasy Ambience</button>
+        <span>&copy; 2025 Mystovia. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
   <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.getElementById('footer-music-btn');
+      if(btn) {
+        let isOn = false;
+        btn.addEventListener('click', function() {
+          isOn = !isOn;
+          btn.textContent = isOn ? "🔊 Ambience On" : "🎵 Fantasy Ambience";
+          btn.style.background = isOn ? "linear-gradient(90deg,#baedfc,#fdf6d5)" : "";
+        });
+      }
+    });
+  </script>
+</div>
+<footer class="footer-glass">
+  <div class="footer-content">
+    <div class="footer-logo-title">
+      <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
+      <span class="footer-title">Mystovia Portal</span>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="creature.html">Creatures</a>
+      <a href="world.html">World</a>
+      <a href="ai-portal.html">AI Portal</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <span>Connect:</span>
+      <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
+      <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
+      <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
+    </div>
+    <div class="footer-credits">
+      <button id="footer-music-btn" aria-label="Toggle music" class="footer-music-btn">🎵 Fantasy Ambience</button>
+      <span>&copy; 2025 Mystovia. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<script>
+  // Simple ambient toggle (UI only)
+  document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('footer-music-btn');
+    if(btn) {
+      let isOn = false;
+      btn.addEventListener('click', function() {
+        isOn = !isOn;
+        btn.textContent = isOn ? "🔊 Ambience On" : "🎵 Fantasy Ambience";
+        btn.style.background = isOn ? "linear-gradient(90deg,#baedfc,#fdf6d5)" : "";
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
