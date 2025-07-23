@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta name="theme-color" content="#5837d0">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="logo.png">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet">
-  <title>Mystovia – Where Myth Meets Reality</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="theme-color" content="#5837d0" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet" />
+<title>Mystovia – Where Myth Meets Reality</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div id="wrapper">
   <header class="header-glass">
-    <span class="logo"><img src="logo.png" class="logo-img" alt="Mystovia Logo">MYSTOVIA</span>
+    <span class="logo">MYSTOVIA</span>
     <span class="tagline">Where Myth Meets Reality</span>
     <nav class="navbar">
       <a href="index.html" class="active">Home</a>
@@ -28,8 +28,8 @@
   <main>
     <section class="hero-section gradient-bg">
       <div class="creature-card glass-card">
-        <img id="creature-img" src="abyssal-wyrm.jpg" alt="Abyssal Wyrm" />
-        <h3 id="creature-name" class="glow-1">Abyssal Wyrm</h3>
+        <img id="creature-img" alt="Featured Creature" />
+        <h3 id="creature-name" class="glow-1"></h3>
         <p><strong>Type:</strong> <span id="creature-type"></span></p>
         <p><strong>Habitat:</strong> <span id="creature-habitat"></span></p>
         <p id="creature-lore"></p>
@@ -45,15 +45,12 @@
       <div id="creature-output"></div>
     </section>
   </main>
-  <!-- Footer below -->
+
   <footer class="footer-glass">
     <div class="footer-content">
-      <div class="footer-logo-title">
-        <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
-        <span class="footer-title">Mystovia Portal</span>
-      </div>
+      <div class="footer-title">Mystovia Portal</div>
       <div class="footer-nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="creature.html">Creatures</a>
         <a href="world.html">World</a>
         <a href="ai-portal.html">AI Portal</a>
@@ -76,7 +73,7 @@
 </div>
 <script src="main.js"></script>
 <script>
-  if('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js');
   }
 </script>
