@@ -1,18 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mystovia – Gallery</title>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Mystovia – Gallery</title>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div id="wrapper">
-  <header class="header-glass">
-    <span class="logo"><img src="logo.png" class="logo-img" alt="Mystovia Logo">MYSTOVIA</span>
-    <span class="tagline">Gallery of Wonders</span>
-    <nav class="navbar">
+<header class="header-glass">
+  <span class="logo">MYSTOVIA</span>
+  <span class="tagline">Gallery of Wonders</span>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="creature.html">Creatures</a>
+    <a href="world.html">World</a>
+    <a href="ai-portal.html">AI Portal</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="hero-section gradient-bg">
+    <div class="glass-card">
+      <h2 class="gradient-text">Mystovia Gallery</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="abyssal-wyrm.jpg" alt="Abyssal Wyrm" class="gallery-thumb" />
+          <figcaption>Abyssal Wyrm</figcaption>
+        </figure>
+        <figure>
+          <img src="fire-phoenix.jpg" alt="Fire Phoenix" class="gallery-thumb" />
+          <figcaption>Fire Phoenix</figcaption>
+        </figure>
+        <figure>
+          <img src="moon-dragon.jpg" alt="Moon Dragon" class="gallery-thumb" />
+          <figcaption>Moon Dragon</figcaption>
+        </figure>
+        <figure>
+          <img src="mystovia-valley-1.png" alt="Enchanted Twilight" class="gallery-thumb valley-img" />
+          <figcaption>Enchanted Twilight</figcaption>
+        </figure>
+        <figure>
+          <img src="mystovia-valley-2.png" alt="Mystic Sunrise" class="gallery-thumb valley-img" />
+          <figcaption>Mystic Sunrise</figcaption>
+        </figure>
+        <figure>
+          <img src="mystovia-valley-3.png" alt="Ancient Ruins" class="gallery-thumb valley-img" />
+          <figcaption>Ancient Ruins</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-glass">
+  <div class="footer-content">
+    <div class="footer-title">Mystovia Portal</div>
+    <div class="footer-nav">
       <a href="index.html">Home</a>
       <a href="creature.html">Creatures</a>
       <a href="world.html">World</a>
@@ -20,52 +67,19 @@
       <a href="about.html">About</a>
       <a href="gallery.html" class="active">Gallery</a>
       <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero-section gradient-bg">
-      <div class="glass-card">
-        <h2 class="gradient-text">Mystovia Gallery</h2>
-        <div class="gallery-grid">
-          <img src="abyssal-wyrm.jpg" alt="Abyssal Wyrm" class="gallery-thumb">
-          <img src="fire-phoenix.jpg" alt="Fire Phoenix" class="gallery-thumb">
-          <img src="moon-dragon.jpg" alt="Moon Dragon" class="gallery-thumb">
-          <img src="landscape-1.jpg" alt="Mystovia Valley" class="gallery-thumb">
-          <img src="landscape-2.jpg" alt="Abyssal Caves" class="gallery-thumb">
-          <img src="magical-map.jpg" alt="World Map" class="gallery-thumb">
-          <!-- Add more images as desired -->
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Footer -->
-  <footer class="footer-glass">
-    <div class="footer-content">
-      <div class="footer-logo-title">
-        <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
-        <span class="footer-title">Mystovia Portal</span>
-      </div>
-      <div class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="creature.html">Creatures</a>
-        <a href="world.html">World</a>
-        <a href="ai-portal.html">AI Portal</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-social">
-        <span>Connect:</span>
-        <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
-        <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
-        <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
-      </div>
-      <div class="footer-credits">
-        <button id="footer-music-btn" aria-label="Toggle music" class="footer-music-btn">🎵 Fantasy Ambience</button>
-        <span>&copy; 2025 Mystovia. All rights reserved.</span>
-      </div>
     </div>
-  </footer>
+    <div class="footer-social">
+      <span>Connect:</span>
+      <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
+      <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
+      <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
+    </div>
+    <div class="footer-credits">
+      <button id="footer-music-btn" class="footer-music-btn">🎵 Fantasy Ambience</button>
+      <span>&copy; 2025 Mystovia. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
 </div>
 <script src="main.js"></script>
 </body>
