@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mystovia – About & Lore</title>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Mystovia – About & Lore</title>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div id="wrapper">
-  <header class="header-glass">
-    <span class="logo"><img src="logo.png" class="logo-img" alt="Mystovia Logo">MYSTOVIA</span>
-    <span class="tagline">About & Lore</span>
-    <nav class="navbar">
+<header class="header-glass">
+  <span class="logo">MYSTOVIA</span>
+  <span class="tagline">About & Lore</span>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="creature.html">Creatures</a>
+    <a href="world.html">World</a>
+    <a href="ai-portal.html">AI Portal</a>
+    <a href="about.html" class="active">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="hero-section gradient-bg">
+    <div class="glass-card">
+      <h2 class="gradient-text">The Origin of Mystovia</h2>
+      <div class="timeline">
+        <div class="timeline-card">
+          <img src="mystovia-valley-1.png" alt="Era of Enchantment" />
+          <h4>Era of Enchantment</h4>
+          <p>Valleys shimmered with magic as Mystovia was born from cosmic dreams and ancient forces.</p>
+        </div>
+        <div class="timeline-card">
+          <img src="mystovia-valley-2.png" alt="Dawn Renewal" />
+          <h4>Dawn Renewal</h4>
+          <p>Morning rays birthed glowing rivers and vibrant life, setting the stage for legends to unfold.</p>
+        </div>
+        <div class="timeline-card">
+          <img src="mystovia-valley-3.png" alt="Ages Forgotten" />
+          <h4>Ages Forgotten</h4>
+          <p>Ruined temples and glyphs speak of knowledge lost, but awaiting rediscovery by brave souls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-glass">
+  <div class="footer-content">
+    <div class="footer-title">Mystovia Portal</div>
+    <div class="footer-nav">
       <a href="index.html">Home</a>
       <a href="creature.html">Creatures</a>
       <a href="world.html">World</a>
@@ -20,60 +58,19 @@
       <a href="about.html" class="active">About</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero-section gradient-bg">
-      <div class="glass-card">
-        <h2 class="gradient-text">The Origin of Mystovia</h2>
-        <div class="timeline">
-          <div class="timeline-card">
-            <img src="landscape-1.jpg" alt="Era of Awakening">
-            <h4>Era of Awakening</h4>
-            <p>Mystovia was born from cosmic magic, its lands forged by the dreams of ancient spirits.</p>
-          </div>
-          <div class="timeline-card">
-            <img src="landscape-2.jpg" alt="First Realms">
-            <h4>The First Realms</h4>
-            <p>The first realms emerged: Crimson Woods, Luminous Wastes, and Abyssal Caves, each home to unique creatures.</p>
-          </div>
-          <div class="timeline-card">
-            <img src="landscape-3.jpg" alt="Age of Wonders">
-            <h4>Age of Wonders</h4>
-            <p>Magic flourished, new creatures appeared, and legends of Mystovia began to echo through time.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Footer -->
-  <footer class="footer-glass">
-    <div class="footer-content">
-      <div class="footer-logo-title">
-        <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
-        <span class="footer-title">Mystovia Portal</span>
-      </div>
-      <div class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="creature.html">Creatures</a>
-        <a href="world.html">World</a>
-        <a href="ai-portal.html">AI Portal</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-social">
-        <span>Connect:</span>
-        <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
-        <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
-        <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
-      </div>
-      <div class="footer-credits">
-        <button id="footer-music-btn" aria-label="Toggle music" class="footer-music-btn">🎵 Fantasy Ambience</button>
-        <span>&copy; 2025 Mystovia. All rights reserved.</span>
-      </div>
     </div>
-  </footer>
+    <div class="footer-social">
+      <span>Connect:</span>
+      <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
+      <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
+      <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
+    </div>
+    <div class="footer-credits">
+      <button id="footer-music-btn" class="footer-music-btn">🎵 Fantasy Ambience</button>
+      <span>&copy; 2025 Mystovia. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
 </div>
 <script src="main.js"></script>
 </body>
