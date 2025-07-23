@@ -206,3 +206,95 @@ main {
 
 ::-webkit-scrollbar {width: 7px; background: #ebdbff;}
 ::-webkit-scrollbar-thumb {background: linear-gradient(135deg,#fdc3fa 30%,#bfd5fa 80%); border-radius:6px;}
+
+.footer-glass {
+  background: rgba(239, 220, 253, 0.88);
+  backdrop-filter: blur(7px);
+  border-top: 2px solid #efdaf9;
+  box-shadow: 0 -2px 14px #c4b2e9aa, 0 0 4px #d4e7fc33;
+  padding: 1.45em 0 0.7em 0;
+  margin-top: 2.8em;
+  width: 100%;
+}
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65em;
+}
+.footer-logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.3em;
+}
+.footer-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  box-shadow: 0 0 6px #bebaf7;
+}
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  color: #5837d0;
+  font-size: 1.27em;
+  letter-spacing: 0.06em;
+}
+.footer-nav {
+  margin: 0.2em 0;
+  display: flex;
+  gap: 1.18em;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+.footer-nav a {
+  text-decoration: none;
+  color: #8c5ef7;
+  font-weight: 600;
+  background: rgba(255,255,255,0.5);
+  border-radius: 9px;
+  padding: 0.19em 0.7em;
+  transition: background 0.18s, color 0.18s;
+}
+.footer-nav a:hover { background: #dbe5ff; color: #e277ff; }
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  font-size: 1.12em;
+  color: #546588;
+}
+.footer-social-icon {
+  font-size: 1.2em;
+  padding: 0 0.15em;
+  color: #7b4cdd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-social-icon:hover { color: #fa7ac3; }
+.footer-credits {
+  margin-top: 0.3em;
+  font-size: 0.98em;
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  color: #5737c7;
+  flex-wrap: wrap;
+}
+.footer-music-btn {
+  font-size: 0.95em;
+  padding: 0.17em 0.94em;
+  border: none;
+  border-radius: 12px;
+  background: #eaeaf8;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+@media (max-width: 670px) {
+  .footer-content {padding: 0 1.3em;}
+  .footer-nav {font-size: 0.99em; gap: 0.59em;}
+  .footer-social { font-size: 1em;}
+}
+
