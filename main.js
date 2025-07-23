@@ -42,19 +42,26 @@ const creatures = [
     license: "Art by DALL·E – License Placeholder"
   }
 ];
+
 function showCreatureOfDay() {
   if(!document.getElementById('creature-img')) return;
   const idx = new Date().getDate() % creatures.length;
   const c = creatures[idx];
   document.getElementById('creature-img').src = c.img;
-  document.getElementById('creature-name').textContent = c.name;
-  document.getElementById('creature-type').textContent = c.type;
-  document.getElementById('creature-habitat').textContent = c.habitat;
-  document.getElementById('creature-lore').textContent = c.lore;
-  const abEl = document.getElementById('creature-abilities');
-  if (abEl) abEl.innerHTML = c.abilities.map(abi=>`<li>${abi}</li>`).join('');
-  document.getElementById('creature-trivia').textContent = c.trivia;
+  const nameEl = document.getElementById('creature-name');
+  if (nameEl) nameEl.textContent = c.name;
+  const typeEl = document.getElementById('creature-type');
+  if (typeEl) typeEl.textContent = c.type;
+  const habitatEl = document.getElementById('creature-habitat');
+  if (habitatEl) habitatEl.textContent = c.habitat;
+  const loreEl = document.getElementById('creature-lore');
+  if (loreEl) loreEl.textContent = c.lore;
+  const abilitiesEl = document.getElementById('creature-abilities');
+  if (abilitiesEl) abilitiesEl.innerHTML = c.abilities.map(ab => `<li>${ab}</li>`).join('');
+  const triviaEl = document.getElementById('creature-trivia');
+  if (triviaEl) triviaEl.textContent = c.trivia;
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   showCreatureOfDay();
   const summonBtn = document.getElementById('summon-btn');
@@ -70,17 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
           <p><strong>Habitat:</strong> ${c.habitat}</p>
           <p><strong>Lore:</strong> ${c.lore}</p>
           <p><strong>Abilities:</strong></p>
-          <ul>${c.abilities.map(abi=>`<li>${abi}</li>`).join('')}</ul>
+          <ul class="abilities-list">${c.abilities.map(abi => `<li>${abi}</li>`).join('')}</ul>
           <p><strong>Trivia:</strong> ${c.trivia}</p>
           <p class="attribution">${c.license}</p>
         </div>
       `;
     });
   }
+
+  // Footer music toggle
   const btn = document.getElementById('footer-music-btn');
   if(btn) {
     let isOn = false;
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', () => {
       isOn = !isOn;
       btn.textContent = isOn ? "🔊 Ambience On" : "🎵 Fantasy Ambience";
       btn.style.background = isOn ? "linear-gradient(90deg,#baedfc,#fdf6d5)" : "";
