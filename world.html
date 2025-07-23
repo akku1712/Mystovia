@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mystovia – World of Mystovia</title>
+  <title>Mystovia – World</title>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <span class="logo">MYSTOVIA</span>
+<div id="wrapper">
+  <header class="header-glass">
+    <span class="logo"><img src="logo.png" class="logo-img" alt="Mystovia Logo">MYSTOVIA</span>
     <span class="tagline">World of Mystovia</span>
     <nav class="navbar">
       <a href="index.html">Home</a>
-      <a href="creature.html">Creature</a>
+      <a href="creature.html">Creatures</a>
       <a href="world.html" class="active">World</a>
       <a href="ai-portal.html">AI Portal</a>
       <a href="about.html">About</a>
@@ -22,65 +23,56 @@
     </nav>
   </header>
   <main>
-    <section>
-      <img src="magical-map.jpg" alt="Map of Mystovia" style="width:100%;max-width:400px;border-radius:1em;box-shadow:0 0 30px #bacedbcc;margin:1.5em auto;display:block;">
-      <div class="timeline">
-        <div class="timeline-card">
-          <h3>Crimson Woods</h3>
-          <p>A mysterious, ever-shifting forest, home to ancient spirits and rare magical fauna.</p>
-        </div>
-        <div class="timeline-card">
-          <h3>Abyssal Caves</h3>
-          <p>Subterranean labyrinths, illuminated by bioluminescent fungi and hidden treasures.</p>
-        </div>
-        <div class="timeline-card">
-          <h3>Luminous Wastes</h3>
-          <p>Glowing lands where elemental storms birth new legends each night.</p>
+    <section class="hero-section gradient-bg">
+      <div class="glass-card">
+        <img src="magical-map.jpg" alt="Map of Mystovia" style="width:100%;max-width:320px;border-radius:1em;box-shadow:0 2px 18px #afe3fd77;">
+        <h3 class="glow-1">Realm Highlights</h3>
+        <div class="timeline">
+          <div class="timeline-card">
+            <h4>Crimson Woods</h4>
+            <p>A mysterious, ever-shifting forest, home to ancient spirits and rare magical fauna.</p>
+          </div>
+          <div class="timeline-card">
+            <h4>Abyssal Caves</h4>
+            <p>Subterranean labyrinths, illuminated by bioluminescent fungi and hidden treasures.</p>
+          </div>
+          <div class="timeline-card">
+            <h4>Luminous Wastes</h4>
+            <p>Glowing lands where elemental storms birth new legends each night.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
-<footer class="footer-glass">
-  <div class="footer-content">
-    <div class="footer-logo-title">
-      <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
-      <span class="footer-title">Mystovia Portal</span>
+  <!-- Footer -->
+  <footer class="footer-glass">
+    <div class="footer-content">
+      <div class="footer-logo-title">
+        <img src="logo.png" class="footer-logo-img" alt="Mystovia Logo">
+        <span class="footer-title">Mystovia Portal</span>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="creature.html">Creatures</a>
+        <a href="world.html">World</a>
+        <a href="ai-portal.html">AI Portal</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <span>Connect:</span>
+        <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
+        <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
+        <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
+      </div>
+      <div class="footer-credits">
+        <button id="footer-music-btn" aria-label="Toggle music" class="footer-music-btn">🎵 Fantasy Ambience</button>
+        <span>&copy; 2025 Mystovia. All rights reserved.</span>
+      </div>
     </div>
-    <div class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="creature.html">Creatures</a>
-      <a href="world.html">World</a>
-      <a href="ai-portal.html">AI Portal</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-social">
-      <span>Connect:</span>
-      <a href="#" aria-label="Twitter" class="footer-social-icon" title="Twitter">🐦</a>
-      <a href="#" aria-label="Discord" class="footer-social-icon" title="Discord">💬</a>
-      <a href="mailto:mythkeeper@mystovia.com" aria-label="Email" class="footer-social-icon" title="Email">✉️</a>
-    </div>
-    <div class="footer-credits">
-      <button id="footer-music-btn" aria-label="Toggle music" class="footer-music-btn">🎵 Fantasy Ambience</button>
-      <span>&copy; 2025 Mystovia. All rights reserved.</span>
-    </div>
-  </div>
-</footer>
-<script>
-  // Simple ambient toggle (UI only)
-  document.addEventListener('DOMContentLoaded', function(){
-    const btn = document.getElementById('footer-music-btn');
-    if(btn) {
-      let isOn = false;
-      btn.addEventListener('click', function() {
-        isOn = !isOn;
-        btn.textContent = isOn ? "🔊 Ambience On" : "🎵 Fantasy Ambience";
-        btn.style.background = isOn ? "linear-gradient(90deg,#baedfc,#fdf6d5)" : "";
-      });
-    }
-  });
-</script>
-
+  </footer>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
